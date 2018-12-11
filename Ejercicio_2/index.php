@@ -38,7 +38,7 @@
     		<?php if (isset($errores['op'])){
     		    echo '<p class="error">'.$errores['op'].'</p>';
     		}?>
-    		<p>Numero de la tabla: <input type="text" name="numeroTabla" value=<?php ValorPost("numeroTabla")?>></p>
+    		<p>Numero de la tabla: <input type="text" name="numeroTabla" value=<?= ValorPost("numeroTabla")?>> (Sólo números entre 15 y 20)</p>
     		<?php if (isset($errores['numeroTabla'])) {
     		    echo '<p class="error">'.$errores['numeroTabla'].'</p>';   
     		}?>

@@ -1,4 +1,15 @@
 <!DOCTYPE html5>
+
+	<!-- 
+		MODIFICACIÓN DE EJERCICIO 1
+
+		Se desea modificar el filtrado del ejercicio 1 de forma que cuando se seleccione como sexo
+		Hombre y de aficiones solo deportes, muestre un mensaje de error invitando a que recargue los
+		datos. Se debe guardar el valor de los campos en caso de error. Solo se deben mostrar los campos del
+		formulario, si se muestran su valor debajo se considerará un error y no se dará el ejercicio por
+		válido.
+	-->
+	
 <html lang="es_ES">
 	<head>
 		<meta name="description" content="descripción de la web">

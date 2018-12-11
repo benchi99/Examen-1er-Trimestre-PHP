@@ -2,7 +2,7 @@
 <html lang="es_ES">
 	<head>
 		<meta name="description" content="Actividad 2.1">
-		<meta name="author" content="Rub�n Bermejo Romero">
+		<meta name="author" content="Rubén Bermejo Romero">
 		<meta name="keywords" content="Actividad 2.1">
 		<meta charset="UTF-8">
 		<title>Actividad 2.1</title>
@@ -14,7 +14,7 @@
 
     if (!$_POST){
         
-     include "ejercicio21form.php";
+     include "index.php";
      
     } else {
         
@@ -22,6 +22,8 @@
             $errores['numeroTabla'] = "No se ha especificado un número.";
         } else if (!preg_match("/[0-9]+/", $_POST['numeroTabla'])){
             $errores['numeroTabla'] = "No se ha especificado un número.";
+        } else if ($_POST['numeroTabla'] < 15 || $_POST['numeroTabla'] > 20){
+            $errores['numeroTabla'] = "Solo se pueden generar tablas en el rango entre 15 y 20.";
         }
         
         if($_POST['op'] == "nada") {    
@@ -29,7 +31,7 @@
         }
         
         if ($errores) {
-            include "ejercicio21form.php";
+            include "index.php";
         } else {
             switch ($_POST['op']){
                 case "sumar":
@@ -57,7 +59,7 @@
                     }
                     break;  
             }
-            echo '<br><a href="ejercicio21form.php">Volver a crear una tabla</a> <a href="indexact2.php">Volver p�gina inicio</a>';   
+            echo '<br><a href="index.php">Volver a crear una tabla</a>';   
             
         }
     }
